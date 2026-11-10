@@ -1,0 +1,21 @@
+name: Submit an idea
+description: Something else you'd like to choose not to see, or a feature idea
+title: "[Idea]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Deliber tries to stay small, so not every idea will ship, but every one gets read.
+  - type: textarea
+    id: what
+    attributes:
+      label: What's your idea?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it help you?
+    validations:
+      required: true

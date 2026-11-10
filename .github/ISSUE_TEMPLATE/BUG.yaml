@@ -1,0 +1,67 @@
+name: Bug report
+description: Something on YouTube isn't hidden, or looks broken
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. YouTube changes its pages often, so details help a lot.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Which page (Home, search, watch page…) and what you did.
+      placeholder: |
+        1. Open a video page
+        2. Scroll to the comments
+    validations:
+      required: true
+  - type: checkboxes
+    id: options
+    attributes:
+      label: Which options were on?
+      options:
+        - label: Thumbnails
+        - label: Channel pictures
+        - label: Comments
+        - label: Likes and dislikes
+        - label: Shorts
+        - label: Recommendations
+        - label: Home topic bar
+        - label: Banner ads
+  - type: dropdown
+    id: thumb-style
+    attributes:
+      label: Thumbnail style
+      description: Only if Thumbnails is on.
+      options:
+        - Blank
+        - Blur
+        - Title
+  - type: input
+    id: version
+    attributes:
+      label: Deliber version
+      description: Shown on chrome://extensions.
+      placeholder: ex. 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: ex. Chrome 142, Arc, Edge
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot (optional)
+      description: Drag an image here.
